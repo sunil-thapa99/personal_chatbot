@@ -1,0 +1,87 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you
+    - what is this thing?
+- intent: male
+  examples: |
+    - i am a male
+    - i am a boy
+    - male
+    - boy
+- intent: femaile
+  examples: |
+    - i am a female
+    - i am a girl
+    - girl
+    - female
+
+- intent: ask_name_action
+  examples: |
+    - my name is [Sunil]{"entity": "name"}
+    - i am [Tom]{"entity": "name"}
+    - i’m [John]{"entity": "name"}
+    - [sunil]{"entity": "name"} is my name
+    - [sunil]{"entity": "name"}
+    - [tom]{"entity": "name"}
+
+- intent: treat
+  examples: |
+    - i will give treat
+    - yes, i will give treat
+
+- intent: no_treat
+  examples: |
+    - sorry no treat for you
+    - no, i will not give treat
+
+- intent: who_is_master
+  examples: |
+    - master name
+    - who is master?
+
+- intent: about
+  examples: |
+    - tell me about master
+    - about master
+
+- intent: work
+  examples: |
+    - what master is doing?
+    - work about master
+    - master work
+

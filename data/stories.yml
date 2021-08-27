@@ -1,0 +1,47 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: sad path 1
+  steps:
+  - intent: goodbye
+  - action: action_goodbye
+
+- story: sad path 2
+  steps:
+  - intent: bot_challenge
+  - action: action_about_bot
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: male
+  - action: action_male
+  - action: download_pdf
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: femaile
+  - action: action_female
+
+- story: ask_name_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_name_action
+  - action: action_name
+  - intent: treat
+  - action: action_treat
+  - intent: who_is_master
+  - action: action_who_master
+  - intent: about
+  - action: action_about
+

@@ -1,0 +1,28 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_greeting];
+2 [class="", fontsize=12, label=action_goodbye];
+"-3" [class=ellipsis, label="..."];
+3 [class="", fontsize=12, label=action_about_bot];
+"-4" [class=ellipsis, label="..."];
+5 [class=active, fontsize=12, label=action_female];
+6 [class="intent dashed active", label="  ?  ", shape=rect];
+7 [class="intent active", fillcolor=lightblue, label=hi, shape=rect, style=filled];
+8 [class=intent, fillcolor=lightblue, label=None, shape=rect, style=filled];
+9 [class=intent, fillcolor=lightblue, label=None, shape=rect, style=filled];
+10 [class="intent active", fillcolor=lightblue, label="i am a female", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 7  [class=active, key=0];
+0 -> 8  [class="", key=0];
+0 -> 9  [class="", key=0];
+1 -> "-1"  [class="", key=NONE, label=""];
+1 -> 10  [class=active, key=0];
+2 -> "-3"  [class="", key=NONE, label=""];
+3 -> "-4"  [class="", key=NONE, label=""];
+5 -> 6  [class=active, key=NONE, label=""];
+7 -> 1  [class=active, key=0];
+8 -> 2  [class="", key=0];
+9 -> 3  [class="", key=0];
+10 -> 5  [class=active, key=0];
+}

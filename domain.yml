@@ -1,0 +1,54 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - femaile
+  - greet
+  - male
+  - goodbye
+  - bot_challenge
+  - female
+  - treat
+  - no_treat
+  - about
+  - work
+  - who_is_master
+  - ask_name_action:
+      use_entities:
+        - name
+
+entities:
+  - name
+
+slots:
+  name:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Hello, I'm Chatbot, my Master Thapa is away right now. Master has taught me to use his Precious. I am not supposed to talk to strangers when he's out, but I am bored, so what is your name?"
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+
+actions:
+- action_about_bot
+- action_female
+- action_goodbye
+- action_name
+- action_male
+- download_pdf
+- action_treat
+- action_no_treat
+- action_who_master
+- action_about
+- action_education
